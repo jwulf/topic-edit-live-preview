@@ -52,7 +52,7 @@ Version:
         <xsl:attribute name="id">
            <xsl:text>title</xsl:text>
         </xsl:attribute>
-        <a class="left">
+        <!-- <a class="left">
           <xsl:attribute name="href">
               <xsl:value-of select="$prod.url"/>
           </xsl:attribute>
@@ -63,7 +63,7 @@ Version:
             <xsl:value-of select="$doc.url"/>
           </xsl:attribute>
           <img src="Common_Content/images/image_right.png" alt="Documentation Site"/>
-        </a>
+        </a> -->
       </p>
       <xsl:apply-templates select="."/>
       <xsl:call-template name="user.footer.content">
