@@ -7,7 +7,7 @@ var exec = require ('child_process').exec, child;
 var querystring = require('querystring');
 
 function xmlPreview(response, request){
-    
+     
     console.log("xmlPreview handler called");
     var preview="<p>Could not transform</p>";
     console.log("Message was: " + request);
@@ -47,7 +47,7 @@ function topicValidate(response,request)
         "<!DOCTYPE section PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\"\n" +
         "\"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" []>");
     var filenumber=1;
-    while (path.existsSync("/tmp/topic"+ filenumber))
+    while (fs.existsSync("/tmp/topic"+ filenumber))
         filenumber++;
     var filename="/tmp/topic"+filenumber;
     var errorText="";
@@ -71,7 +71,7 @@ function topicValidate(response,request)
             else{console.log("Successfully deleted "+ filename);}
         });
          response.writeHead(200, {
-            "Content-Type": "text/xml",
+            "Content-Type": "text/plain",
             "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers": "Content-Type"
         });
