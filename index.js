@@ -9,6 +9,7 @@ handle["/xmlpreview"] = requestHandlers.xmlPreview;
 handle["/restget"] = requestHandlers.proxyRESTGet;
 handle["/topicvalidate"] = requestHandlers.topicValidate;
 handle["/restput"] = requestHandlers.proxyRESTPut;
+handle['/rest/1/dtdvalidate'] = requestHandlers.topicValidate;
 
 // Start the server with a router, and a handlers object for the router
 server.start(router.route, handle);
